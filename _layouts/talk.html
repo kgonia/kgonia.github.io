@@ -1,0 +1,19 @@
+---
+layout: default
+---
+<article class="talk">
+  <header class="talk-header">
+    <h1 class="page-title">{{ page.title }}</h1>
+    <p class="talk-meta">
+      {% if page.date %}<span class="talk-date">{{ page.date | date: "%-d %B %Y" }}</span>{% endif %}
+      {% if page.venue %}<span class="talk-sep">·</span><span class="talk-venue">{{ page.venue }}</span>{% endif %}
+    </p>
+    {% if page.description %}<p class="talk-desc">{{ page.description }}</p>{% endif %}
+  </header>
+
+  <div class="talk-body">
+    {{ content }}
+  </div>
+
+  <p class="talk-back"><a href="{{ '/talks/' | relative_url }}">&larr; All talks</a></p>
+</article>

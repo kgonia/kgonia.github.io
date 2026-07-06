@@ -1,0 +1,30 @@
+<aside class="author-sidebar">
+  <div class="author-card">
+    {% if site.author.avatar %}
+      <img class="author-avatar" src="{{ site.author.avatar | relative_url }}" alt="{{ site.author.name }}">
+    {% endif %}
+    <h2 class="author-name">{{ site.author.name }}</h2>
+    {% if site.author.bio %}<p class="author-bio">{{ site.author.bio }}</p>{% endif %}
+
+    <ul class="author-links">
+      {% if site.author.location and site.author.location != "" %}
+        <li><i class="fa-solid fa-location-dot fa-fw"></i><span>{{ site.author.location }}</span></li>
+      {% endif %}
+      {% if site.author.email and site.author.email != "" %}
+        <li><a href="mailto:{{ site.author.email }}"><i class="fa-solid fa-envelope fa-fw"></i><span>Email</span></a></li>
+      {% endif %}
+      {% if site.author.github and site.author.github != "" %}
+        <li><a href="https://github.com/{{ site.author.github }}" rel="me noopener"><i class="fa-brands fa-github fa-fw"></i><span>GitHub</span></a></li>
+      {% endif %}
+      {% if site.author.linkedin and site.author.linkedin != "" %}
+        <li><a href="https://www.linkedin.com/in/{{ site.author.linkedin }}" rel="me noopener"><i class="fa-brands fa-linkedin fa-fw"></i><span>LinkedIn</span></a></li>
+      {% endif %}
+      {% if site.author.twitter and site.author.twitter != "" %}
+        <li><a href="https://x.com/{{ site.author.twitter }}" rel="me noopener"><i class="fa-brands fa-x-twitter fa-fw"></i><span>X</span></a></li>
+      {% endif %}
+      {% if site.author.huggingface and site.author.huggingface != "" %}
+        <li><a href="https://huggingface.co/{{ site.author.huggingface }}" rel="me noopener"><span class="hf-icon" aria-hidden="true">🤗</span><span>Hugging Face</span></a></li>
+      {% endif %}
+    </ul>
+  </div>
+</aside>

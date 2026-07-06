@@ -1,0 +1,15 @@
+---
+layout: default
+---
+<article class="talk">
+  <header class="talk-header">
+    <h1 class="page-title">{{ page.title }}</h1>
+    {% if page.description %}<p class="talk-desc">{{ page.description }}</p>{% endif %}
+  </header>
+
+  <div class="talk-body">
+    {{ content }}
+  </div>
+
+  <p class="talk-back"><a href="{{ '/projects/' | relative_url }}">&larr; All projects</a></p>
+</article>

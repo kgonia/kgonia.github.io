@@ -1,0 +1,74 @@
+# Site settings
+title: Krzysztof Gonia
+description: >-
+  Java Programmer. Talks, projects and slides from Krzysztof Gonia.
+baseurl: ""
+url: "https://kgonia.github.io"
+lang: en
+
+# Author / profile (shown in the sidebar)
+author:
+  name: Krzysztof Gonia
+  avatar: /assets/images/profile.svg   # replace with /assets/images/profile.jpg once you add a photo
+  bio: >-
+    Java Programmer. Interested in the JVM, concurrency and Project Loom.
+    Here you'll find slides and notes from some of my talks.
+  location: Poland
+  # Social links — fill in your real handles/URLs. Leave blank to hide a link.
+  email: ""
+  github: kgonia
+  linkedin: ""      # e.g. "krzysztof-gonia"
+  twitter: kgonia7  # X/Twitter handle, no @
+  huggingface: SearchingMan
+
+# Analytics — privacy-friendly traffic tracking via GoatCounter (free).
+# 1. Sign up at https://www.goatcounter.com/ and pick a code (your subdomain).
+# 2. Put just that code below (e.g. if your dashboard is kgonia.goatcounter.com, use "kgonia").
+# Leave blank to disable. Only loads on the live GitHub Pages site, never local preview.
+analytics:
+  goatcounter: "kgonia"
+
+# Navigation (top menu)
+navigation:
+  - title: About
+    url: /
+  - title: Talks
+    url: /talks/
+  - title: Projects
+    url: /projects/
+
+# Collections
+collections:
+  talks:
+    output: true
+    permalink: /talks/:name/
+  projects:
+    output: true
+    permalink: /projects/:name/
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: talks
+    values:
+      layout: talk
+  - scope:
+      path: ""
+      type: projects
+    values:
+      layout: project
+  - scope:
+      path: ""
+    values:
+      layout: default
+
+# Build settings
+markdown: kramdown
+permalink: pretty
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - vendor

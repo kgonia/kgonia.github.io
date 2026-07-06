@@ -1,0 +1,22 @@
+---
+layout: default
+title: Talks
+permalink: /talks/
+description: Presentations and slides by Krzysztof Gonia.
+---
+
+<p>Slides and recordings from presentations I've given.</p>
+
+<ul class="talk-list">
+  {% assign talks = site.talks | sort: "date" | reverse %}
+  {% for talk in talks %}
+    <li class="talk-list-item">
+      <h3><a href="{{ talk.url | relative_url }}">{{ talk.title }}</a></h3>
+      <p class="talk-meta">
+        {% if talk.date %}{{ talk.date | date: "%-d %B %Y" }}{% endif %}
+        {% if talk.venue %}<span class="talk-sep">·</span>{{ talk.venue }}{% endif %}
+      </p>
+      {% if talk.description %}<p>{{ talk.description }}</p>{% endif %}
+    </li>
+  {% endfor %}
+</ul>
