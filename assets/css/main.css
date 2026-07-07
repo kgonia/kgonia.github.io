@@ -288,3 +288,14 @@ hr {
   .site-nav li { padding: 0.5rem 0; }
   .nav-toggle:checked ~ .site-nav { max-height: 320px; }
 }
+
+/* Support callout on project pages */
+.support-cta {
+  margin: 2.5rem 0 1.5rem;
+  padding: 1rem 1.25rem;
+  border-left: 4px solid #e4b04a;
+  background: rgba(228, 176, 74, 0.08);
+  border-radius: 0 6px 6px 0;
+  font-size: 0.95rem;
+}
+.support-cta p { margin: 0; }

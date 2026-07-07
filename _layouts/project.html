@@ -11,5 +11,7 @@ layout: default
     {{ content }}
   </div>
 
+  {% unless page.hide_support %}{% include support-cta.html %}{% endunless %}
+
   <p class="talk-back"><a href="{{ '/projects/' | relative_url }}">&larr; All projects</a></p>
 </article>
